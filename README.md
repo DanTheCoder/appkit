@@ -7,7 +7,7 @@ A library of reusable components using Vue.js and Tailwind CSS
 You can install the package via npm:
 
 ```bash
-npm install danthecoder/appkit
+npm install @danthecoder/appkit
 ```
 
 ## Credits

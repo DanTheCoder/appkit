@@ -1,7 +1,6 @@
 {
-    "name": "appkit",
+    "name": "@danthecoder/appkit",
     "version": "1.0.0",
-    "private": true,
     "description": "A library of reusable components using Vue.js and Tailwind CSS",
     "author": "DanTheCoder (https://danthecoder.com)",
     "main": "dist/appkit.umd.min.js",

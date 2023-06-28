@@ -1,38 +1,26 @@
-// Components
-import ButtonSpinner from './components/ButtonSpinner.vue';
-import Panel from './components/Panel.vue';
-import Modal from './components/Modal.vue';
-import Dropdown from './components/Dropdown.vue';
-import Pagination from './components/Pagination.vue';
-import PaginationSimple from './components/PaginationSimple.vue';
+import { ButtonSubmit, Pagination, Dropdown, Modal, Panel } from "@/components";
+import notify from "@/components/notify";
+import confirm from "@/components/confirm";
 
-// Properties
-import Alert from './components/alert/index.js';
-import Confirm from './components/confirm/index.js';
-
-
-// Components array
-const components = [
-	ButtonSpinner,
-	Panel,
-	Modal,
-	Dropdown,
-	Pagination,
-	PaginationSimple
-];
-
-
-// Vuejs Install
 export default {
-	install(app) {
+    install: (Vue) => {
 
-		// Register components from array 
-		components.map(component => {
-			app.component(component.name, component);
-		});
+        // Registering components globally
+        Vue.component('ButtonSubmit', ButtonSubmit);
+        Vue.component('Pagination', Pagination);
 
-		// Add properties that are accessible in all components
-		app.config.globalProperties.$alert = Alert();
-		app.config.globalProperties.$confirm = Confirm();
-	}
-}
+        Vue.component('Dropdown', Dropdown);
+        Vue.component('Modal', Modal);
+        Vue.component('Panel', Panel);
+    }
+};
+
+export { 
+    ButtonSubmit, 
+    Pagination, 
+    Dropdown, 
+    Modal,
+    Panel,
+    notify,
+    confirm 
+};

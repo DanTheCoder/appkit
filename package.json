@@ -1,50 +1,32 @@
 {
     "name": "@danthecoder/appkit",
-    "version": "1.0.2",
-    "description": "A library of reusable components using Vue.js and Tailwind CSS",
+    "version": "1.1.0",
+    "description": "A minimal opinionated interactive UI component library built for Vue.js and Tailwind CSS",
     "author": "DanTheCoder (https://danthecoder.com)",
-    "main": "dist/appkit.umd.min.js",
+    "type": "module",
+    "main": "./dist/appkit.umd.cjs",
+    "module": "./dist/appkit.js",
     "files": [
-        "dist/*.js"
+        "dist"
     ],
+    "exports": {
+        ".": {
+            "import": "./dist/appkit.js",
+            "require": "./dist/appkit.umd.cjs"
+        }
+    },
     "scripts": {
-        "lint": "vue-cli-service lint",
-        "dev": "vue-cli-service build --mode development --dest ./dist --target lib --name appkit src/index.js --no-clean",
-        "watch": "npm run dev -- --watch",
-        "build": "vue-cli-service build --target lib --name appkit src/index.js && rm ./dist/demo.html"
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
     },
     "dependencies": {
-        "@headlessui/vue": "^1.4.1",
-        "@popperjs/core": "^2.10.1",
-        "core-js": "^3.6.5",
-        "vue": "^3.0.0"
+        "@headlessui/vue": "^1.7.14",
+        "@popperjs/core": "^2.11.8",
+        "vue": "^3.2.47"
     },
     "devDependencies": {
-        "@vue/cli-plugin-babel": "~5.0.6",
-        "@vue/cli-plugin-eslint": "~5.0.6",
-        "@vue/cli-service": "~5.0.6",
-        "@vue/compiler-sfc": "^3.0.0",
-        "babel-eslint": "^10.1.0",
-        "eslint": "^8.18.0",
-        "eslint-plugin-vue": "^9.1.1"
-    },
-    "eslintConfig": {
-        "root": true,
-        "env": {
-            "node": true
-        },
-        "extends": [
-            "plugin:vue/vue3-essential",
-            "eslint:recommended"
-        ],
-        "parserOptions": {
-            "parser": "babel-eslint"
-        },
-        "rules": {}
-    },
-    "browserslist": [
-        "> 1%",
-        "last 2 versions",
-        "not dead"
-    ]
+        "@vitejs/plugin-vue": "^4.1.0",
+        "vite": "^4.3.9"
+    }
 }

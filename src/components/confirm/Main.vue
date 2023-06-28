@@ -26,22 +26,22 @@
                         </div>
 
                         <div class="mt-5 sm:grid sm:grid-cols-2 sm:gap-3 sm:grid-flow-row-dense">
-                            <ButtonSpinner v-if="cancelAction" type="button" class="btn-light mb-3 sm:mb-0 w-full justify-center py-2.5 sm:col-start-1"
+                            <ButtonSubmit v-if="cancelAction" type="button" class="btn-light mb-3 sm:mb-0 w-full justify-center py-2.5 sm:col-start-1"
                                 @click="onCancel"
                                 :loading="cancelButtonLoading">
                                 {{ cancelButtonText }}
-                            </ButtonSpinner>
+                            </ButtonSubmit>
 
                             <button v-else type="button" class="btn btn-light mb-3 sm:mb-0 w-full justify-center py-2.5 sm:col-start-1"
                                 @click="open = false">
                                 {{ cancelButtonText }}
                             </button> 
 
-                            <ButtonSpinner type="button" class="btn-primary w-full justify-center py-2.5 sm:col-start-2"
+                            <ButtonSubmit type="button" class="btn btn-primary w-full justify-center py-2.5 sm:col-start-2"
                                 @click="onConfirm"
                                 :loading="confirmButtonLoading">
                                 {{ confirmButtonText }}
-                            </ButtonSpinner>
+                            </ButtonSubmit>
                         </div>
 
                     </div>
@@ -55,7 +55,7 @@
 
 <script>
 import { Dialog, DialogOverlay, TransitionChild, TransitionRoot } from '@headlessui/vue'
-import ButtonSpinner from '../ButtonSpinner.vue';
+import ButtonSubmit from '../ButtonSubmit.vue';
 
 export default {
     name: 'Confirm',
@@ -65,7 +65,7 @@ export default {
         DialogOverlay,
         TransitionChild,
         TransitionRoot,
-        ButtonSpinner
+        ButtonSubmit
     },
 
     props: {

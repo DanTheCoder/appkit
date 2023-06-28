@@ -1,10 +1,10 @@
 # AppKit
 
-A library of reusable components using Vue.js and Tailwind CSS
+A minimal opinionated interactive UI component library built for Vue.js and Tailwind CSS
 
 ## Installation
 
-You can install the package via npm:
+Install the package via npm:
 
 ```bash
 npm install @danthecoder/appkit

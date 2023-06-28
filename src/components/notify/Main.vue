@@ -63,8 +63,6 @@ const borderTypeMap = {
 import Timeout from './timeout'
 
 export default {
-    name: 'Alert',
-
     props: {
         message: {
             type: String,
